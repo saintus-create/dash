@@ -3,9 +3,9 @@
   "builds": [
     {
       "src": "frontend/package.json",
-      "use": "@sveltejs/vercel-builder@3",
+      "use": "@vercel/static-build",
       "config": {
-        "runtime": "nodejs18.x"
+        "distDir": ".svelte-kit/output/static"
       }
     }
   ],
