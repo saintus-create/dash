@@ -1,14 +1,17 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "src": "frontend/package.json",
+      "use": "@sveltejs/vercel-builder@3",
+      "config": {
+        "runtime": "nodejs18.x"
+      }
     }
   ],
   "routes": [
     {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "/"
     }
   ]
